@@ -1,10 +1,12 @@
 import React from 'react';
 import './Product.css';
+import { useHistory } from 'react-router-dom';
 import { useStateValue } from '../context/StateProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function Product({ id, title, price, rating, img }) {
 	// const notify = () =>
+	const history = useHistory();
 	const [state, dispatch] = useStateValue();
 	const checkProductInCart = () => {
 		let checkExists = state.basket.filter((product, index) => {
@@ -16,6 +18,10 @@ function Product({ id, title, price, rating, img }) {
 		return true;
 	};
 	const handleBasket = () => {
+		if (!state.user) {
+			history.push('/signin');
+			return;
+		}
 		let checkExists = state.basket.filter((product, index) => {
 			return id === product.id;
 		});
