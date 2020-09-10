@@ -1,0 +1,81 @@
+.home {
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1600px;
+}
+.home__image {
+	width: 100%;
+	z-index: -1;
+	mask-image: linear-gradient(180deg, #000, transparent);
+}
+.header {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	background-color: #131921;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+.home__row {
+	display: flex;
+	z-index: 1;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+	display: inline-block;
+	width: 20px;
+	color: white !important;
+	height: 20px;
+}
+.carousel-control-next-icon {
+	background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRhLRDw3Kp_I_leIjV5_RgZkxo5Dw4NT8O6MA&usqp=CAU') !important;
+}
+.carousel-control-prev-icon {
+	background-image: url('data:image/png;base64,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') !important;
+}
+.carousel-indicators li {
+	background-color: white !important;
+}
+@media (max-width: 650px) {
+	.home__row {
+		display: flex;
+		flex-direction: column;
+		z-index: 1;
+		align-content: center;
+		margin: 50px 20px 0 0;
+	}
+	.home__image {
+		height: 225px;
+		margin-bottom: -100px;
+	}
+	.carousel-indicators li {
+		background-color: white !important;
+	}
+	.header {
+		height: 110px !important;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #131921;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 100;
+	}
+	.header__search {
+		margin-right: 15px;
+	}
+	.header__Nav {
+		margin: auto;
+		margin-bottom: 10px;
+		display: flex;
+		width: 100%;
+	}
+}
