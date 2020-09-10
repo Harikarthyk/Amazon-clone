@@ -48,9 +48,13 @@ function CheckOut() {
 
 				{/* <CheckOutProduct /> */}
 			</div>
-			<div className="checkout__right">
-				<SubTotal />
-			</div>
+			{state.basket.length === 0 ? (
+				''
+			) : (
+				<div className="checkout__right">
+					<SubTotal />
+				</div>
+			)}
 		</div>
 	);
 }
