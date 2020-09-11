@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './SubTotal.css';
 import { useStateValue } from '../context/StateProvider';
+import { Link } from 'react-router-dom';
 function SubTotal() {
 	const [state, dispatch] = useStateValue();
 	const [subTotal, setSubTotal] = useState(0);
@@ -19,7 +20,9 @@ function SubTotal() {
 			<small className="subtotal__gift">
 				<input type="checkbox" /> This order contains gift.
 			</small>
-			<button className="subtotal__button ">Proced to Checkout</button>
+			<Link to="/payment">
+				<button className="subtotal__button ">Proced to Checkout</button>
+			</Link>
 		</div>
 	);
 }

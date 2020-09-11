@@ -3,6 +3,7 @@
 	border-bottom: 1px solid lightgrey;
 	margin: 20px 0;
 	padding-bottom: 10px;
+	align-items: center;
 }
 .checkoutProduct__image {
 	width: 180px;
@@ -32,4 +33,8 @@
 	display: flex;
 	width: 500px;
 	height: 300px;
+}
+.checkoutProduct:hover {
+	box-shadow: 2px 45px 55px 39px #f3f3f3;
+	padding: 2px;
 }

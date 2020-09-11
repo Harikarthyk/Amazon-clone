@@ -18,10 +18,10 @@ function Product({ id, title, price, rating, img }) {
 		return true;
 	};
 	const handleBasket = () => {
-		if (!state.user) {
-			history.push('/signin');
-			return;
-		}
+		// if (!state.user) {
+		// 	history.push('/signin');
+		// 	return;
+		// }
 		let checkExists = state.basket.filter((product, index) => {
 			return id === product.id;
 		});
